@@ -1,0 +1,27 @@
+.modal__close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  box-shadow: none;
+
+  &:hover .modal__close-icon,
+  &:focus .modal__close-icon {
+  fill: var(--acent-color);
+  }
+}
+
+.modal__close-icon {
+  fill: #000000;
+  transition: fill var(--anim-slow);
+}
+
