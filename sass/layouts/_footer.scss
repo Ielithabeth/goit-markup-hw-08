@@ -2,21 +2,57 @@
 .footer {
     background-color: var(--main-dark-cl);
 
-&__wraper {
-    display: flex;
-    justify-content: center;
-    padding: 60px 0;
-}
+    &__wraper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+      padding: 60px 0;
+    
+      @media screen and (min-width: 768px) {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+  
+      @media screen and (min-width: 1200px) {
+        justify-content: center;
+        align-items: flex-start;
+      }
+    }
 }
 
-.footer__contacts {
-    margin-right: 70px;
+.footer__contacts {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 165px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        align-items: flex-start;
+        margin-right: 10px;
+    }
 }
   
 .footer--logo {
     color: var(--main-light-cl);
     display: block;
-    margin-bottom: 20px;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    @media screen and (min-width: 1200px) {
+        gap: 9px;
+        align-items: flex-start;
+    }
 }
   
 .footer__adress {
@@ -25,9 +61,7 @@
     letter-spacing: 0.03em;
     color: var(--main-light-cl);
     font-style: normal;
-  
-    display: block;
-    margin-bottom: 9px;
+    text-align: center;
   
     transition: color var(--anim-slow);
 
@@ -38,24 +72,30 @@
 }
   
 .footer__link {
-    display: block;
-  
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
+    text-align: center;
   
     transition: color var(--anim-slow);
-
-    &:not(last-child) {
-        margin-bottom: 9px;
-    }
 
     &:hover,
     &:focus {
     color: var(--acent-color);
     } 
+}
+
+.footer__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+        align-items: flex-start;
+        margin-right: 33px;
+    }   
 }
  
 .footer__call {
@@ -90,10 +130,6 @@
 .footer__icon {
     fill: #ffffff;
 }
-  
-.footer__socials {
-    margin-right: 93px;
-}
 
 .footer__subtitle {
     margin-bottom: 20px;
@@ -104,4 +140,9 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #ffffff;
-  }
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+    }  
+}

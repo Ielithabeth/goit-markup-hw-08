@@ -28,10 +28,72 @@
     <!--Header-->
     <header class="header">
       <div class="header__wraper container">
-        <!--Novigations-->
         <a class="logo link header--logo" href="./index.html">
           <span class="logo__span"> Web</span>Studio
         </a>
+
+        <!--Mobile header-->
+        <button class="menu__btn btn" data-menu-button>
+          <svg class="menu__icon" width="18" height="18">
+            <use
+              class="menu__btn-burger"
+              href="./images/icons.svg#icon-burger-menu"
+            ></use>
+            <use
+              class="menu__btn-close"
+              href="./images/icons.svg#icon-menu-close"
+            ></use>
+          </svg>
+        </button>
+
+        <!--Mobile menu-->
+        <div class="menu" data-menu>
+          <ul class="menu__nav list">
+            <li class="menu__nav-item">
+              <a class="menu__nav-link link" href="./index.html">Cтудия</a>
+            </li>
+            <li class="menu__nav-item">
+              <a class="menu__nav-link current link" href="./portfolio.html"
+                >Партфолио</a
+              >
+            </li>
+            <li class="menu__nav-item">
+              <a class="menu__nav-link link" href="">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="menu__contacts list">
+            <li class="menu__contacts-item">
+              <a class="menu__contacts-phone link" href="tel:+38 096 111 11 11"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="menu__contacts-item">
+              <a
+                class="menu__contacts-email link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="menu__media list">
+            <li class="menu__media-item">
+              <a class="menu__media-link link" href="">Instagram</a>
+            </li>
+            <li class="menu__media-item">
+              <a class="menu__media-link link" href="">Twitter</a>
+            </li>
+            <li class="menu__media-item">
+              <a class="menu__media-link link" href="">Facebook</a>
+            </li>
+            <li class="menu__media-item">
+              <a class="menu__media-link link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--Table, note header-->
         <nav>
           <ul class="navigation list">
             <li class="navigation__item">
@@ -50,7 +112,6 @@
           </ul>
         </nav>
 
-        <!--Contacts-->
         <ul class="contacts list">
           <li class="contacts__item">
             <a class="contacts__link link" href="mailto:info@devstudio.com">
@@ -106,13 +167,37 @@
             <li class="portfolio__item">
               <a class="link" href="">
                 <div class="portfolio__pic">
-                  <img
-                    class="portfolio__img"
-                    src="./images/portfolio-page/portfolio-img-1.jpg"
-                    alt="ноутбук с открытой страницей сайта: светлый фон, фотографии сотрудников, информация о сайте"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-1.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-1@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-1_m.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-1_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-1_s.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-1_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio-page/portfolio-img-1.jpg"
+                      alt="ноутбук с открытой страницей сайта: светлый фон, фотографии сотрудников, информация о сайте"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__desc">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -122,7 +207,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio__desc">
+                <div class="portfolio__desc portfolio__desc--wider">
                   <h2 class="portfolio__title">Технокряк</h2>
                   <p class="portfolio__txt">Веб-сайт</p>
                 </div>
@@ -132,13 +217,37 @@
             <li class="portfolio__item">
               <a class="link" href="">
                 <div class="portfolio__pic">
-                  <img
-                    class="portfolio__img"
-                    src="./images/portfolio-page/portfolio-img-2.jpg"
-                    alt="два афроамериканских баскетболиста в схватке за мяч. абстрактный голубой фон"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-2.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-2@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-2_m.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-2_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-2_s.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-2_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio-page/portfolio-img-2.jpg"
+                      alt="два афроамериканских баскетболиста в схватке за мяч. абстрактный голубой фон"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__desc">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -148,7 +257,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio__desc">
+                <div class="portfolio__desc portfolio__desc--wider">
                   <h2 class="portfolio__title">
                     Постер New Orlean vs Golden Star
                   </h2>
@@ -160,14 +269,38 @@
             <li class="portfolio__item">
               <a class="link" href="">
                 <div class="portfolio__pic">
-                  <img
-                    class="portfolio__img"
-                    src="./images/portfolio-page/portfolio-img-3.jpg"
-                    lang="en"
-                    alt="the seafood restaurant. est. 2001"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-3.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-3@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-3_m.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-3_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-3_s.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-3_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio-page/portfolio-img-3.jpg"
+                      lang="en"
+                      alt="the seafood restaurant. est. 2001"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__desc">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -187,13 +320,37 @@
             <li class="portfolio__item">
               <a class="link" href="">
                 <div class="portfolio__pic">
-                  <img
-                    class="portfolio__img"
-                    src="./images/portfolio-page/portfolio-img-4.jpg"
-                    alt="черные игровые наушнкии на светло-бежевом фоне"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-4.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-4@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-4_m.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-4_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-4_s.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-4_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio-page/portfolio-img-4.jpg"
+                      alt="черные игровые наушнкии на светло-бежевом фоне"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__desc">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -213,13 +370,37 @@
             <li class="portfolio__item">
               <a class="link" href="">
                 <div class="portfolio__pic">
-                  <img
-                    class="portfolio__img"
-                    src="./images/portfolio-page/portfolio-img-5.jpg"
-                    alt="две небольшие прямоугольные картонные коробки на светло-бежевом фоне. одна побольше белого цвета, вторая меньше - крафтовая"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-5.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-5@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-5_m.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-5_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-5_s.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-5_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio-page/portfolio-img-5.jpg"
+                      alt="две небольшие прямоугольные картонные коробки на светло-бежевом фоне. одна побольше белого цвета, вторая меньше - крафтовая"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__desc">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -239,13 +420,37 @@
             <li class="portfolio__item">
               <a class="link" href="">
                 <div class="portfolio__pic">
-                  <img
-                    class="portfolio__img"
-                    src="./images/portfolio-page/portfolio-img-6.jpg"
-                    alt="монитор компьютера с открытым сайтом, темный фон"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-6.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-6@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-6_m.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-6_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-6_s.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-6_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio-page/portfolio-img-6.jpg"
+                      alt="монитор компьютера с открытым сайтом, темный фон"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__desc">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -265,13 +470,37 @@
             <li class="portfolio__item">
               <a class="link" href="">
                 <div class="portfolio__pic">
-                  <img
-                    class="portfolio__img"
-                    src="./images/portfolio-page/portfolio-img-7.jpg"
-                    alt="открытый журнал на светло-бежевом фоне с фотографиями девушек"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-7.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-7@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-7_m.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-7_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-7_s.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-7_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio-page/portfolio-img-7.jpg"
+                      alt="открытый журнал на светло-бежевом фоне с фотографиями девушек"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__desc">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -291,13 +520,37 @@
             <li class="portfolio__item">
               <a class="link" href="">
                 <div class="portfolio__pic">
-                  <img
-                    class="portfolio__img"
-                    src="./images/portfolio-page/portfolio-img-8.jpg"
-                    alt="белая бумажная этикетка с скафтовой ленточкой на светло-бежевом фоне"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-8.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-8@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-8_m.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-8_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-8_s.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-8_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio-page/portfolio-img-8.jpg"
+                      alt="белая бумажная этикетка с скафтовой ленточкой на светло-бежевом фоне"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__desc">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -317,13 +570,37 @@
             <li class="portfolio__item">
               <a class="link" href="">
                 <div class="portfolio__pic">
-                  <img
-                    class="portfolio__img"
-                    src="./images/portfolio-page/portfolio-img-9.jpg"
-                    alt="ноутбук на рабочем столе с открытой страницей Приложения"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-9.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-9@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-9_m.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-9_m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-page/portfolio-img-9_s.jpg    1x,
+                        ./images/portfolio-page/portfolio-img-9_s@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio-page/portfolio-img-9.jpg"
+                      alt="ноутбук на рабочем столе с открытой страницей Приложения"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__desc">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -352,7 +629,7 @@
             <span class="logo__span"> Web</span>Studio
           </a>
           <address>
-            <ul class="list">
+            <ul class="footer__list list">
               <li>
                 <a
                   class="footer__adress link"
@@ -374,7 +651,6 @@
           </address>
         </div>
 
-        <!--Social medias-->
         <div class="footer__socials">
           <p class="footer__call">Присоединяйтесь</p>
           <ul class="socials list">
@@ -429,7 +705,6 @@
           </ul>
         </div>
 
-        <!--Subscription-form-->
         <div class="footer__form">
           <p class="footer__subtitle">Подпишитесь на рассылку</p>
           <form class="subscription-form" name="subscription-form">

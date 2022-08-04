@@ -1,14 +1,16 @@
 /*Projects filter*/
 .filter {
     display: flex;
-    justify-content: center;
-}
-  
-.filter__item {
-    &:not(:last-child) {margin-right: 8px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 8px;
+
+    @media screen and (min-width: 768px) {
+      justify-content: center;
     }
 }
- 
+  
 .filter__btn {
     font-family: inherit;
     font-weight: 500;

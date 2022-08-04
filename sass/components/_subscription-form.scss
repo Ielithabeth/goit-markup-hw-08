@@ -1,14 +1,20 @@
 /*Subscription form*/
 .subscription-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
+
+    @media screen and (min-width: 1200px) {
+        justify-content: center;
+        flex-direction: row;
+        gap: 12px;
+    }
 }
   
 .subscription-form__field {
     padding: 0 15px;
-    width: 358px;
+    width: 450px;
     height: 50px;
   
     background-color: var(--main-dark-cl);
@@ -24,6 +30,10 @@
     color: #ffffff;
   
     cursor: pointer;
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+    }
 }
   
 .subscription-form__item::placeholder {

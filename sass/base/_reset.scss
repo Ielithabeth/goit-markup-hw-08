@@ -16,6 +16,12 @@ body {
     padding: 0px;
   }
 
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
   .link {
     text-decoration: none;
   }
@@ -23,5 +29,7 @@ body {
   .list {
     list-style-type: none;
   }
+
+  
 
  
